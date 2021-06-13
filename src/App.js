@@ -6,7 +6,7 @@ import Home from "./ChatArea/Home";
 function App() {
 
   let [userName, setUserName] = useState('');
-  
+  /* set the userName */
   const name = (dt) => {
     setUserName(dt);
   }

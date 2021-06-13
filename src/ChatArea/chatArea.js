@@ -1,17 +1,17 @@
 import React, { Component } from "react";
 import "../styles/chatArea.css";
-/* import UserDetails from "./userDetails"; */
 import InputData from "./inputDetails";
 import MessageDisplay from "./messagesArea";
 
+/* socket connection */
 import socketIOClient from 'socket.io-client'
-
 const io = socketIOClient("http://localhost:2255");
 
 
 class ChatArea extends Component {
     constructor(props) {
         super(props);
+        /* InOut means send or Receive message we assign css classes */
         this.state = {
             InOut: '',
             msg: [],
@@ -41,7 +41,7 @@ class ChatArea extends Component {
     childData(dataFromChild) {
         /* destruct the data */
         let { type, data } = dataFromChild;
-        /* send data */
+        /* send data to server*/
         io.emit('fromclient', { fromclient: data })
 
         let ay = this.state.msg;
