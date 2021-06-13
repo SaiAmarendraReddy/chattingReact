@@ -1,0 +1,107 @@
+.chatArea
+{
+    border: 1px solid red;
+    width: 99%;
+    padding: 2px;
+    box-sizing: border-box;
+    font-style: italic;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.inputData
+{
+    border: 1px solid red;
+    padding: 3px 0px;
+    display: flex;
+    justify-content: center;
+    font-size: 15px;
+}
+.inputData input
+{
+    margin-right: 3px;
+    height: 30px;
+    outline: none;
+    border-radius: 10px;
+    border-color: rgb(136, 134, 134);
+}
+button{
+    width: auto;
+    outline: none;
+    border-radius: 10px;
+    border-color: rgb(136, 134, 134);
+}
+button:focus
+{
+    border: 3px solid rgb(36, 90, 238);
+}
+
+.msgDisplyArea
+{
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    padding: 1px;
+    overflow: auto;
+}
+.common
+{
+    padding: 4px;
+    width: fit-content;
+    font-size: 20px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    font-weight: bold;
+    margin-bottom: 4px;
+    display: flex;
+    flex-direction: column;
+}
+.common span{
+    font-size: 12px;
+    padding: 2px;
+    align-content: flex-start;
+}
+.common p{
+    margin: 0px;
+    padding: 3px;
+}
+.outgoing
+{
+    background-color: rgb(127, 226, 88);
+    align-self: flex-end;
+    border-bottom-left-radius: 10px;
+}
+.outgoing span{
+    text-align: start;
+}
+.incoming{
+    align-self: flex-start;
+    background-color: rgb(240, 165, 143);
+    border-bottom-right-radius: 10px;
+}
+.incoming span{
+    text-align: end;
+}
+.home
+{
+    padding: 3px;
+    margin: 4px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: auto;
+}
+
+.home label
+{
+    margin-right: 4px;
+}
+.home input[type='text']
+{
+    outline: none;
+    margin-right: 4px;
+}
+
+.home button
+{
+    height: 25px;
+}

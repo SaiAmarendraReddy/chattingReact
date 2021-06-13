@@ -1,23 +1,24 @@
-import logo from './logo.svg';
+import { useState } from 'react';
 import './App.css';
+import ChatArea from "./ChatArea/chatArea";
+import Home from "./ChatArea/Home";
 
 function App() {
+
+  let [userName, setUserName] = useState('');
+  
+  const name = (dt) => {
+    setUserName(dt);
+  }
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+      {/* heading */}
+      <header className="head">
+        Chatting Application
       </header>
+      {/* if user name is not empty then open chat area else home page */}
+      {userName !== '' ? <ChatArea username={userName} /> : <Home getName={name} />}
     </div>
   );
 }
